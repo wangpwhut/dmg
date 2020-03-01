@@ -1,0 +1,48 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+  <parent>
+    <groupId>dmg</groupId>
+    <artifactId>dmg-master</artifactId>
+    <version>0.0.1-SNAPSHOT</version>
+  </parent>
+  
+  <!--数据操作子系统：数据清洗，数据分层存储等功能-->
+  <artifactId>dmg-data-opt</artifactId>
+  <name>dmg-data-opt</name>
+  <description>dmg-data-opt</description>
+  
+	<dependencies>
+	    <dependency>
+	        <groupId>org.springframework.cloud</groupId>
+	        <artifactId>spring-cloud-starter-eureka</artifactId>
+	    </dependency>
+	</dependencies>
+	
+	<dependencyManagement>
+	    <dependencies>
+	        <dependency>
+	           <groupId>org.springframework.cloud</groupId>
+	           <artifactId>spring-cloud-dependencies</artifactId>
+	           <version>Dalston.SR1</version>
+	           <type>pom</type>
+	           <scope>import</scope>
+	        </dependency>
+	    </dependencies>
+	</dependencyManagement>  
+  
+  	
+  	<build>
+  		<finalName>dmg-data-opt</finalName>
+  		<plugins>
+  			<plugin>
+  				<groupId>org.springframework.boot</groupId>
+  				<artifactId>spring-boot-maven-plugin</artifactId>
+  				<configuration>
+  					<!-- 主函数的入口 -->
+  					<mainClass>dmg-data-opt.Application</mainClass>
+  				</configuration>
+  			</plugin>
+  		</plugins>
+  	</build>  
+    
+</project>
