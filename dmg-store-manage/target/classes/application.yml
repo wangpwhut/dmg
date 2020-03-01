@@ -1,0 +1,14 @@
+spring:
+  application: 
+    name: store
+
+server:
+  context-path: /
+  port: 7005
+  
+eureka:
+  client:
+    service-url:
+      ##单点配置:
+      defaultZone: http://127.0.0.1:7000/eureka/
+  
