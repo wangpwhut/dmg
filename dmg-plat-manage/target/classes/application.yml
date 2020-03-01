@@ -1,0 +1,14 @@
+spring:
+  application: 
+    name: supe
+
+server:
+  context-path: /
+  port: 7006
+  
+eureka:
+  client:
+    service-url:
+      ##单点配置:
+      defaultZone: http://127.0.0.1:7000/eureka/
+  
