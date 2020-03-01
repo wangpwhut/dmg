@@ -1,0 +1,42 @@
+spring:
+  application: 
+    name: zuul
+
+server:
+  context-path: /
+  port: 7009
+  
+eureka:
+  client:
+    service-url:
+      ##单点配置:
+      defaultZone: http://127.0.0.1:7000/eureka/
+ 
+zuul:
+  routes: 
+    api-ai:
+      path: /ai/**
+      service-id: ai
+    api-count:
+      path: /count/**
+      service-id: count
+    api-acc:
+      path: /acc/**
+      service-id: acc
+    api-ribbon:
+      path: /ribbon/**
+      service-id: ribbon         
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+      
+     
